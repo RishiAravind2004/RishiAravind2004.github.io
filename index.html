@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishi Aravind P | Python & Full Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Rishi Aravind P - Python Developer & Full Stack Developer specializing in FastAPI, Django, Flet, REST APIs, and AI Agent Solutions." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <i class="fa-solid fa-code"></i> Rishi Aravind<span>.py</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About ( )</a></li>
+        <li><a href="#skills" class="nav-link">Skills ( )</a></li>
+        <li><a href="#projects" class="nav-link">Projects ( )</a></li>
+        <li><a href="#experience" class="nav-link">Experience ( )</a></li>
+        <li><a href="#education" class="nav-link">Education ( )</a></li>
+        <li><a href="#contact" class="nav-link">Contact ( )</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-paper-plane"></i> Get In Touch
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="status-dot"></span> Open to Full Stack & Python Roles
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Rishi Aravind P</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          Building <span class="typing-text" id="typing-text"></span><span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-bio">
+          Computer Science Engineering student & passionate Developer specializing in building scalable <strong>Python
+            applications</strong>, <strong>FastAPI REST backends</strong>, <strong>Agentic AI tools</strong>, and modern
+          <strong>Full Stack web solutions</strong>.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-rocket"></i> Explore Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/RishiAravind2004" target="_blank" title="GitHub Profile" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/rishi-aravind" target="_blank" title="LinkedIn Profile"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://discord.com/users/potter_seeker" target="_blank" title="Discord: potter_seeker"
+            aria-label="Discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a href="mailto:rishiaravind2004@gmail.com" title="Send Email" aria-label="Email">
+            <i class="fa-solid fa-at"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Terminal Card -->
+      <div class="hero-terminal">
+        <div class="terminal-card glass-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">
+              <i class="fa-solid fa-terminal"></i> rishi@dev-station:~
+            </div>
+            <div class="terminal-actions">
+              <span class="terminal-badge"><i class="fa-solid fa-bolt"></i> Interactive</span>
+            </div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">rishi@system:~$</span> <span class="terminal-command">whoami</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output highlight">Rishi Aravind P — Python & Full Stack Developer</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">rishi@system:~$</span> <span class="terminal-command">cat skills.txt</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output">Python | FastAPI | Django | SQL | Agentic AI | Prompt Engineering</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">rishi@system:~$</span> <span class="terminal-command">help</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output muted">Type 'projects', 'skills', 'whoami', 'contact', or 'run' below.</span>
+            </div>
+            <div class="terminal-input-line">
+              <span class="terminal-prompt">rishi@system:~$</span>
+              <input type="text" id="terminal-input" autocomplete="off" placeholder="type a command..."
+                aria-label="Terminal prompt input" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-user-check"></i> ABOUT ME</div>
+        <h2 class="section-title">Who <span>I Am</span></h2>
+        <p class="section-desc">A developer who turns ideas into production-ready software.</p>
+      </div>
+
+      <div class="about-content-layout">
+        <div class="glass-card about-card-main">
+          <h3 class="about-role-title">
+            <i class="fa-brands fa-python" style="color: var(--accent-cyan);"></i> Python & Full Stack Developer
+          </h3>
+          <p class="about-text">
+            I'm a Computer Science Engineering student with hands-on experience in <strong>Python development</strong>,
+            <strong>full-stack web applications</strong>, <strong>REST API development</strong>, and <strong>AI-powered
+              solutions</strong>.
+          </p>
+          <p class="about-text">
+            I build scalable applications using <strong>FastAPI, Django, Flet</strong>, and follow <strong>MVC / MVT
+              architectural patterns</strong> with clean, maintainable code. I'm passionate about solving real-world
+            problems through software.
+          </p>
+          <a href="#contact" class="btn btn-hire" style="margin-top: 1.5rem;">
+            <i class="fa-solid fa-handshake"></i> Hire Me
+          </a>
+        </div>
+
+        <div class="about-highlights">
+          <div class="glass-card highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="highlight-info">
+              <h4>B.E. Computer Science</h4>
+              <p>Adhiparasakthi College of Engineering</p>
+            </div>
+          </div>
+          <div class="glass-card highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="highlight-info">
+              <h4>FastAPI & Django</h4>
+              <p>Production REST API backends</p>
+            </div>
+          </div>
+          <div class="glass-card highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="highlight-info">
+              <h4>Agentic AI & GenAI</h4>
+              <p>LangGraph, AI prompting, automation</p>
+            </div>
+          </div>
+          <div class="glass-card highlight-card">
+            <div class="highlight-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="highlight-info">
+              <h4>MVC & MVT Architecture</h4>
+              <p>Clean, scalable software design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-gears"></i> SKILLS & TECH</div>
+        <h2 class="section-title">Technical <span>Superpowers</span></h2>
+        <p class="section-desc">Technologies, frameworks, and tools I use to build scalable software solutions.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="glass-card skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-code"></i></div>
+            <h3 class="skill-cat-title">Languages & Core</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-tag"><i class="fa-solid fa-database"></i> SQL</div>
+            <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
+            <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-layer-group"></i></div>
+            <h3 class="skill-cat-title">Frameworks & Libraries</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fa-solid fa-bolt"></i> FastAPI</div>
+            <div class="skill-tag"><i class="fa-solid fa-cubes"></i> Django</div>
+            <div class="skill-tag"><i class="fa-solid fa-desktop"></i> Flet (Flutter Python)</div>
+            <div class="skill-tag"><i class="fa-solid fa-link"></i> SQLAlchemy</div>
+            <div class="skill-tag"><i class="fa-solid fa-brain"></i> LangGraph</div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-server"></i></div>
+            <h3 class="skill-cat-title">Databases & Architecture</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</div>
+            <div class="skill-tag"><i class="fa-solid fa-database"></i> SQLite</div>
+            <div class="skill-tag"><i class="fa-solid fa-network-wired"></i> REST APIs</div>
+            <div class="skill-tag"><i class="fa-solid fa-key"></i> JWT Authentication</div>
+            <div class="skill-tag"><i class="fa-solid fa-user-shield"></i> RBAC</div>
+            <div class="skill-tag"><i class="fa-solid fa-sitemap"></i> MVC Architecture</div>
+            <div class="skill-tag"><i class="fa-solid fa-sitemap"></i> MVT Architecture</div>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category">
+          <div class="skill-cat-header">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-robot"></i></div>
+            <h3 class="skill-cat-title">AI & Developer Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <div class="skill-tag"><i class="fa-solid fa-microchip"></i> Generative AI</div>
+            <div class="skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Prompting</div>
+            <div class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+            <div class="skill-tag"><i class="fa-solid fa-flask"></i> Playwright / HTTPX</div>
+            <div class="skill-tag"><i class="fa-solid fa-paper-plane"></i> Postman</div>
+            <div class="skill-tag"><i class="fa-solid fa-terminal"></i> VS Code</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-laptop-code"></i> PORTFOLIO</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-desc">Production-grade applications built with Python, FastAPI, Flet, and Generative AI.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: VirtualStreamer -->
+        <div class="glass-card project-card">
+          <div class="project-banner">
+            <span class="project-badge"><i class="fa-solid fa-cloud-arrow-up"></i> Cloud Streaming</span>
+            <i class="fa-solid fa-video project-icon-large"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">VirtualStreamer</h3>
+            <p class="project-desc">
+              Cross-platform client-server video streaming application integrating Google Drive API for secure cloud
+              video storage & on-demand video streaming.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">Flet</span>
+              <span class="tech-chip">Google Drive API</span>
+              <span class="tech-chip">SQLAlchemy</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-details-btn">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/RishiAravind2004/VirtualStreamer" target="_blank"
+                class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: IntelliQuiz-System -->
+        <div class="glass-card project-card">
+          <div class="project-banner">
+            <span class="project-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> GenAI Powered</span>
+            <i class="fa-solid fa-graduation-cap project-icon-large"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">IntelliQuiz-System</h3>
+            <p class="project-desc">
+              Multi-user web & desktop platform that automates quiz creation and score evaluation using Generative AI.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">Flet</span>
+              <span class="tech-chip">SQLite</span>
+              <span class="tech-chip">Generative AI</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-details-btn">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/RishiAravind2004/IntelliQuiz-System" target="_blank"
+                class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: DevSentinel -->
+        <div class="glass-card project-card">
+          <div class="project-banner">
+            <span class="project-badge"><i class="fa-solid fa-robot"></i> Agentic AI</span>
+            <i class="fa-solid fa-bug-slash project-icon-large"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">DevSentinel – Testing Agentic AI</h3>
+            <p class="project-desc">
+              AI-powered testing agent built with LangGraph that automates validation for Web Applications, APIs, and
+              Web+API systems.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">LangGraph</span>
+              <span class="tech-chip">Playwright</span>
+              <span class="tech-chip">HTTPX</span>
+              <span class="tech-chip">Agentic AI</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-details-btn">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/RishiAravind2004/DevSentinel-Agentic-AI" target="_blank"
+                class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: ToDo List Application -->
+        <div class="glass-card project-card">
+          <div class="project-banner">
+            <span class="project-badge"><i class="fa-solid fa-list-check"></i> Task Management</span>
+            <i class="fa-solid fa-square-check project-icon-large"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">ToDo List Application</h3>
+            <p class="project-desc">
+              A clean and functional Django web application for managing daily tasks with user authentication, email
+              verification, and password recovery.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Django</span>
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">SQL</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-details-btn">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/RishiAravind2004/ToDo-List" target="_blank" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Library Management System -->
+        <div class="glass-card project-card">
+          <div class="project-banner">
+            <span class="project-badge"><i class="fa-solid fa-book-bookmark"></i> Database & Management</span>
+            <i class="fa-solid fa-book-open-reader project-icon-large"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Library Management System</h3>
+            <p class="project-desc">
+              Full-stack system for managing book catalogs, member registrations, automated issue/return tracking, and
+              overdue fines.
+            </p>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">SQL</span>
+              <span class="tech-chip">MySQL / SQLite</span>
+              <span class="tech-chip">HTML/CSS</span>
+              <span class="tech-chip">OOP</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-details-btn">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/RishiAravind2004/Library-Management" target="_blank"
+                class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Internship & Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-briefcase"></i> EXPERIENCE</div>
+        <h2 class="section-title">Industry <span>Internship</span></h2>
+        <p class="section-desc">Practical experience applying Machine Learning and Data Engineering principles.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-content">
+            <h3 class="timeline-role">Machine Learning Intern</h3>
+            <div class="timeline-company">
+              <i class="fa-solid fa-building"></i> Strydo Technologies
+            </div>
+            <div class="timeline-date">Jul 2025 – Aug 2025</div>
+            <ul class="project-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Mastered core machine learning concepts, data preprocessing,
+                and predictive analytics pipeline design.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Worked extensively with Python data science libraries
+                including Pandas & NumPy for data manipulation and cleaning.</li>
+              <li><i class="fa-solid fa-circle-check"></i> Gained hands-on exposure to ETL (Extract, Transform, Load)
+                processes for preparing raw datasets for analysis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications Section -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> BACKGROUND</div>
+        <h2 class="section-title">Education & <span>Certifications</span></h2>
+        <p class="section-desc">Academic achievements and professional certifications.</p>
+      </div>
+
+      <div class="edu-cert-grid">
+        <!-- Education Card -->
+        <div class="glass-card" style="padding: 2rem;">
+          <h3 class="card-heading">
+            <i class="fa-solid fa-building-columns" style="color: var(--accent-cyan);"></i> Academic Degrees
+          </h3>
+
+          <div class="edu-item">
+            <div class="edu-title">Bachelor of Engineering (B.E.)</div>
+            <div class="edu-sub">Computer Science Engineering | Adhiparasakthi College of Engineering</div>
+            <div class="edu-sub" style="font-family: var(--font-mono); margin-top: 0.25rem;">2022 – 2026</div>
+            <span class="edu-score">CGPA: 8.3</span>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-title">Higher Secondary Certificate (HSC)</div>
+            <div class="edu-sub">Completed in 2022</div>
+            <span class="edu-score">Score: 61%</span>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-title">Secondary School Leaving Certificate (SSLC)</div>
+            <div class="edu-sub">Completed in 2020</div>
+            <span class="edu-score">Score: 74%</span>
+          </div>
+        </div>
+
+        <!-- Certifications Card -->
+        <div class="glass-card" style="padding: 2rem;">
+          <h3 class="card-heading">
+            <i class="fa-solid fa-award" style="color: var(--accent-purple);"></i> Certifications & Training
+          </h3>
+
+          <div class="cert-item">
+            <div class="cert-title">TCS iON NQT – IT Certification</div>
+            <div class="cert-sub">Issued: April 2025</div>
+            <div class="project-tech" style="margin-top: 0.5rem; margin-bottom: 0;">
+              <span class="tech-chip">Cognitive: 64.54%</span>
+              <span class="tech-chip">Quant & Reasoning: 56.43%</span>
+              <span class="tech-chip">Python Programming: 63.95%</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title">Python Full Stack Development Training</div>
+            <div class="cert-sub">QSpiders Training Institute</div>
+            <p class="edu-sub" style="margin-top: 0.4rem;">
+              Comprehensive hands-on training in Python, SQL, HTML, CSS, Django, and database integration practices.
+            </p>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title">Machine Learning Internship Certificate</div>
+            <div class="cert-sub">Strydo Technologies (Aug 2025)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="glass-card modal-container">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="project-badge" id="modal-badge">Featured Project</span>
+        <h2 class="modal-title" id="modal-title">Project Title</h2>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc" id="modal-desc">Project description goes here...</p>
+        <h4 class="modal-subtitle">Key Features & Architecture:</h4>
+        <ul class="modal-bullets" id="modal-bullets"></ul>
+        <h4 class="modal-subtitle">Technologies Used:</h4>
+        <div class="modal-tech" id="modal-tech"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" target="_blank" class="btn btn-primary" id="modal-github">
+          <i class="fa-brands fa-github"></i> View Repository
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> CONTACT</div>
+        <h2 class="section-title">Let's Build <span>Together</span></h2>
+        <p class="section-desc">Have an open Python or Full Stack role? Feel free to reach out directly!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Cards -->
+        <div class="contact-info-cards">
+          <div class="glass-card info-card" id="copy-email-btn" title="Click to copy email">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info-detail">
+              <h4>Email Address</h4>
+              <p>rishiaravind2004@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="glass-card info-card" id="copy-phone-btn" title="Click to copy phone">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-detail">
+              <h4>Phone Number</h4>
+              <p>+91 93609 41772</p>
+            </div>
+          </div>
+
+          <a href="https://discord.com/users/potter_seeker" target="_blank" class="glass-card info-card">
+            <div class="info-icon" style="color: #5865F2;"><i class="fa-brands fa-discord"></i></div>
+            <div class="info-detail">
+              <h4>Discord</h4>
+              <p>potter_seeker</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/RishiAravind2004" target="_blank" class="glass-card info-card">
+            <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="info-detail">
+              <h4>GitHub Profile</h4>
+              <p>github.com/RishiAravind2004</p>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/rishi-aravind" target="_blank" class="glass-card info-card">
+            <div class="info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="info-detail">
+              <h4>LinkedIn Profile</h4>
+              <p>linkedin.com/in/rishi-aravind</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="glass-card contact-form" id="contact-form"
+          action="https://formsubmit.co/131e34f23c36887bbf3a3b712802505f" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="New Portfolio Contact Message!" />
+          <input type="hidden" name="_template" value="table" />
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">
+            Send a Quick Message
+          </h3>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control"
+              placeholder="Hi Rishi, I'd like to discuss a opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#hero" class="logo">
+        <i class="fa-solid fa-code"></i> Rishi<span>.py</span>
+      </a>
+      <p class="footer-copy">
+        &copy; 2026 Rishi Aravind P | Python Full Stack Developer. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
